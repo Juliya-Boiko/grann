@@ -1,14 +1,10 @@
 import { ReactComponent as InstaIcon } from '../../assets/icons/instagram.svg';
 import { ReactComponent as TelegIcon } from '../../assets/icons/telegram.svg';
 import { ReactComponent as WhatsIcon } from '../../assets/icons/facebook.svg';
-
-
 import {
   FooterContainer, FooterLogo, FooterContacts, FooterAddress, FooterLink,
   FooterSocList, FooterSocItem, FooterInfo
 } from "./Footer.styled";
-
-
 
 export const Footer = () => {
   return (

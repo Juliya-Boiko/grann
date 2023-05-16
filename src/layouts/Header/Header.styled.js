@@ -102,12 +102,3 @@ export const HeaderBasketBtn = styled.button`
     fill: inherit;
   }
 `;
-
-
-
-
-export const Title = styled.p`
-/* font-family: 'Moniqa';
-font-size: 120px;
-line-height: 125px; */
-`;
