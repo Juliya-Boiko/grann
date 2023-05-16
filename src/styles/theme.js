@@ -2,18 +2,18 @@ export const theme = {
 
   breakpoints: {
     mobile: '375px',
-    desktop: '1360px'
+    desktop: '1440px'
   },
 
   colors: {
-    brand: {
+    // brand: {
       primary: '#705A66',
       secondary: '#F5F7F8',
       accent: '#F5EEE0',
       white: '#ffffff',
       // black: '#333333',
       // green: '#2EBF4F',
-    },
+    // },
     // grayScale: {
     //   gray3: '#F5F5F5',
     //   gray2: '#808080',
