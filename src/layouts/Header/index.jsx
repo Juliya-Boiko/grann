@@ -18,11 +18,11 @@ export const Header = () => {
       <HeaderLogo to='/'>
         <picture>
           <source
-            srcSet={`${require('../../assets/images/logo/logo.webp')} 1x, ${require('../../assets/images/logo/logo@2x.webp')} 2x,`}
+            srcSet={`${require('../../assets/images/logo/header/logo.webp')} 1x, ${require('../../assets/images/logo/header/logo@2x.webp')} 2x,`}
             type="image/webp" />
           <img
-            src={require('../../assets/images/logo/logo.png')} alt="Logo"
-            srcSet={`${require('../../assets/images/logo/logo@2x.png')} 2x`} />
+            src={require('../../assets/images/logo/header/logo.png')} alt="Logo"
+            srcSet={`${require('../../assets/images/logo/header/logo@2x.png')} 2x`} />
         </picture>
       </HeaderLogo>
 
