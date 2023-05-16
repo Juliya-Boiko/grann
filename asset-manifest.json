@@ -1,20 +1,25 @@
 {
   "files": {
     "main.css": "/grann/static/css/main.2d709f4f.css",
-    "main.js": "/grann/static/js/main.aab23140.js",
-    "static/js/50.48df04c9.chunk.js": "/grann/static/js/50.48df04c9.chunk.js",
+    "main.js": "/grann/static/js/main.077f27e7.js",
+    "static/js/116.564ceaa8.chunk.js": "/grann/static/js/116.564ceaa8.chunk.js",
     "static/js/734.f82a9791.chunk.js": "/grann/static/js/734.f82a9791.chunk.js",
     "static/js/314.c3ffcc89.chunk.js": "/grann/static/js/314.c3ffcc89.chunk.js",
     "static/media/Moniqa-BlackCondensedDisplay.woff": "/grann/static/media/Moniqa-BlackCondensedDisplay.945107ffb362c4bee187.woff",
+    "static/media/logo@2x.png": "/grann/static/media/logo@2x.548fa8dfa764d85e55a4.png",
+    "static/media/logo@2x.webp": "/grann/static/media/logo@2x.500c49454a1004066e55.webp",
+    "static/media/logo.webp": "/grann/static/media/logo.83b93c0d99b9bcfad9d1.webp",
     "index.html": "/grann/index.html",
+    "static/media/basket.svg": "/grann/static/media/basket.db3b018710488a22b0cb99ab48052d65.svg",
+    "static/media/burger.svg": "/grann/static/media/burger.8fcd4dffc39d0d9f740ea6c8b5ce297d.svg",
     "main.2d709f4f.css.map": "/grann/static/css/main.2d709f4f.css.map",
-    "main.aab23140.js.map": "/grann/static/js/main.aab23140.js.map",
-    "50.48df04c9.chunk.js.map": "/grann/static/js/50.48df04c9.chunk.js.map",
+    "main.077f27e7.js.map": "/grann/static/js/main.077f27e7.js.map",
+    "116.564ceaa8.chunk.js.map": "/grann/static/js/116.564ceaa8.chunk.js.map",
     "734.f82a9791.chunk.js.map": "/grann/static/js/734.f82a9791.chunk.js.map",
     "314.c3ffcc89.chunk.js.map": "/grann/static/js/314.c3ffcc89.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d709f4f.css",
-    "static/js/main.aab23140.js"
+    "static/js/main.077f27e7.js"
   ]
 }
