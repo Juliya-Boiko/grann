@@ -1,7 +1,7 @@
 import { offers } from "./offers";
-import { OffersSection, OffersList, OffersItem, OffersImg, OffersLink } from "./Offers.styled";
+import { OffersSection, OffersList, OffersItem, OffersLink } from "./Offers.styled";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-//mport ImgUrl from '../../assets/images/offers/mobile/cake.png';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const Offers = () => {
   return (
@@ -12,7 +12,7 @@ export const Offers = () => {
             <LazyLoadImage src={require(`../../assets/images/offers/${imgUrl}.png`)}
               srcSet={`${require(`../../assets/images/offers/${imgUrl}@2x.png`)} 2x`}
               width="100%" height="auto"
-              alt={title}
+              alt={title} effect="blur"
             />
             <OffersLink>
               {title}

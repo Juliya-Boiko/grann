@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-
 export const OffersSection = styled.section`
   padding: 120px 10px 50px 10px;
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     padding: 150px 100px;
   }
 `;
-
 
 export const OffersList = styled.ul`
   display: flex;
@@ -33,11 +31,6 @@ export const OffersItem = styled.li`
     width: calc((100% - 200px)/ 2 );
     margin: 50px;
   }
-`;
-
-export const OffersImg = styled.img`
-  width: 100%;
-  height: auto;
 `;
 
 export const OffersLink = styled(Link)`
