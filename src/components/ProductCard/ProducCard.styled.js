@@ -1,41 +1,35 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const BestsellerItemCard = styled.div`
-  margin: 0 0 40px 0;
-  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
-    width: calc((100% - 90px) / 3);
-    margin: 0 15px;
-    font-size: 18px;
-  }
-`;
-
-export const BestsellerItemWrapper = styled.div`
+export const ProductCardWrapper = styled.div`
   position: relative;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
 `;
 
-export const BestsellerItemLink = styled(Link)`
+export const ProductCardLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 276px;
+  width: calc(100% - 20px);
   height: 67px;
   text-transform: uppercase;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   border-radius: 10px;
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
 `;
 
-export const BestsellerItemDescr = styled.div`
+export const ProductCardInfo = styled.div`
   display: flex;
   justify-content: space-between;
+  font-size: 12px;
   fill: ${p => p.theme.colors.primary};
-
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop})  {
+    font-size: 18px;
+  }
   svg {
-    width: 25px;
+    min-width: 25px;
     height: 25px;
     fill: inherit;
     @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
@@ -45,9 +39,9 @@ export const BestsellerItemDescr = styled.div`
   }
 `;
 
-export const BestsellerItemName = styled.p`
+export const ProductCardName = styled.p`
   margin: 0 0 10px 0;
-  font-size: 18px;
+  font-size: 14px;
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop})  {
     font-size: 24px;
   }

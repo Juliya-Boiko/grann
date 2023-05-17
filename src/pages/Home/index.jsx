@@ -6,8 +6,6 @@ import { About } from "components/About";
 import { Feedback } from "components/Feedback";
 import { Faq } from "components/FAQ";
 
-
-
 const Home = () => {
   return (
     <>

@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { ReactComponent as BasketIcon } from '../../../assets/icons/basket.svg';
 import {
-  BestsellerItemCard, BestsellerItemWrapper, BestsellerItemOverlay,
+  BestsellerItemCard, BestsellerItemWrapper,
   BestsellerItemLink, BestsellerItemDescr, BestsellerItemName
 } from "./BestsellerItem.styled";
+import { Overlay } from 'styles/common/Overlay.styled';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -21,9 +22,9 @@ export const BestsellerItem = ({ item }) => {
           onClick={() => setShowOverlay(true)}
         />
         {showOverlay
-          ? <BestsellerItemOverlay onClick={() => setShowOverlay(false)}>
+          ? <Overlay onClick={() => setShowOverlay(false)}>
             <BestsellerItemLink to='/catalog'>Детальніше</BestsellerItemLink>
-          </BestsellerItemOverlay>
+          </Overlay>
           : null
         }
       </BestsellerItemWrapper>
