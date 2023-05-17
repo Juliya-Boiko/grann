@@ -93,6 +93,7 @@ export const FeddbackTextarea = styled.textarea`
   border-radius: 10px;
   overflow: hidden;
   background-color: ${p => p.theme.colors.secondary};
+  resize: none;
 `;
 
 export const FeedbackSubmitBtn = styled.button`

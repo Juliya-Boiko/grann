@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { faq } from "./faq";
+import { faq } from "../../data/faqs";
 import { SectionTitle } from "styles/common/SectionTitle.styled";
 import { FaqSection, FaqLabel, FaqQuestion, FaqAnswer } from "./Faq.styled";
 import { ReactComponent as Arrow } from '../../assets/icons/arrow-short.svg';

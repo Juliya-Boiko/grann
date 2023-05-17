@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const FaqSection = styled.section`
   padding: 100px 10px;
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop})  {

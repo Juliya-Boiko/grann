@@ -1,23 +1,23 @@
-
+import { nanoid } from 'nanoid';
 
 export const faq = [
   {
-    id: 0,
+    id: nanoid(),
     question: 'СКІЛЬКИ ЧАСУ ПОТРІБНО ДЛЯ ВИГОТОВЛЕННЯ ЗАМОВЛЕННЯ?',
     answer: 'Замовлення необхідно зробити як мінімум за 3-4 дні до вашого свята.',
   },
   {
-    id: 1,
+    id: nanoid(),
     question: 'ЧИ Є У ВАС ДОСТАВКА?',
     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, vitae!',
   },
   {
-    id: 2,
+    id: nanoid(),
     question: 'ЧИ ГОТУЄТЕ ВИ ТОРТИ З МАСТИКИ?',
     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, vitae!',
   },
   {
-    id: 3,
+    id: nanoid(),
     question: 'ЧИ МОЖНА ЇСТИ ВАШІ ТОРТИ ДІТЯМ ТА ВАГІТНИМ?',
     answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, vitae!',
   },

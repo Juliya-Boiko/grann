@@ -1,5 +1,6 @@
 import { Hero } from "components/Hero";
 import { Offers } from "components/Offers";
+import { Bestsellers } from "components/Bestsellers";
 import { Benefits } from "components/Benefits";
 import { About } from "components/About";
 import { Feedback } from "components/Feedback";
@@ -12,6 +13,7 @@ const Home = () => {
     <>
       <Hero />
       <Offers />
+      <Bestsellers />
       <Benefits />
       <About />
       <Feedback />
