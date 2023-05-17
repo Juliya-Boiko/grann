@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import MonicaFontWoff from '../fonts/Moniqa-BlackCondensedDisplay.woff';
+import JeffScriptWoff from '../fonts/Jeff-Script-Regular.woff';
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -7,6 +8,13 @@ export const GlobalStyle = createGlobalStyle`
     src: local('Moniqa'),
     url(${MonicaFontWoff}) format('woff');
     font-weight: 900;
+  }
+
+  @font-face {
+    font-family: 'Jeff';
+    src: local('Jeff'),
+    url(${JeffScriptWoff}) format('woff');
+    font-weight: 400;
   }
 
   body {
