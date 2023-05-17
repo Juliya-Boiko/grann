@@ -3,6 +3,9 @@ import { Offers } from "components/Offers";
 import { Benefits } from "components/Benefits";
 import { About } from "components/About";
 import { Feedback } from "components/Feedback";
+import { Faq } from "components/FAQ";
+
+
 
 const Home = () => {
   return (
@@ -12,6 +15,7 @@ const Home = () => {
       <Benefits />
       <About />
       <Feedback />
+      <Faq />
     </>
   );
 };
