@@ -24,7 +24,7 @@ export const ProductCard = ({ item }) => {
         />
         {showOverlay
           ? <Overlay onClick={() => setShowOverlay(false)}>
-            <ProductCardLink to='/'>Детальніше</ProductCardLink>
+            <ProductCardLink to={`/catalog/${id}`}>Детальніше</ProductCardLink>
           </Overlay>
           : null
         }
