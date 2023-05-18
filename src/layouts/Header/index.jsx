@@ -5,8 +5,14 @@ import {
   HeaderContainer, HeaderNav, HeaderLogo, HeaderActions,
   HeaderMenuBtn, HeaderBasketBtn
 } from "./Header.styled";
+import { useSelector } from "react-redux";
 
 export const Header = () => {
+  const { items } = useSelector(state => state.orders);
+
+  const filledBasket = () => {
+    return items.length >= 1 ? true : false;
+  };
 
   return (
     <HeaderContainer>
@@ -30,7 +36,7 @@ export const Header = () => {
         <HeaderMenuBtn type='button'><BurgerIcon /></HeaderMenuBtn>
         <Link to="/">Доставка</Link>
         <Link to="/">Про мене</Link>
-        <HeaderBasketBtn type='button'><BasketIcon /></HeaderBasketBtn>
+        <HeaderBasketBtn type='button' accent={filledBasket()}><BasketIcon /></HeaderBasketBtn>
       </HeaderActions>
     </HeaderContainer>
   );

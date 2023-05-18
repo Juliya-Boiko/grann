@@ -82,6 +82,7 @@ export const HeaderMenuBtn = styled.button`
 `;
 
 export const HeaderBasketBtn = styled.button`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,5 +101,18 @@ export const HeaderBasketBtn = styled.button`
     width: 100%;
     height: 100%;
     fill: inherit;
+  }
+  &::after {
+    content: '';
+    display: ${p => p.accent ? 'block' : 'none'};
+    width: 10px;
+    height: 10px;
+    background-color: lightgreen;
+    position: absolute;
+    z-index: 2;
+    top: -4px;
+    right: -5px;
+    border-radius: 10px;
+    overflow: hidden;
   }
 `;

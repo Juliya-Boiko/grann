@@ -1,16 +1,19 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItem } from 'redux/ordersSlice';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Overlay } from 'styles/common/Overlay.styled';
 import { ReactComponent as BasketIcon } from '../../assets/icons/basket.svg';
 
 import {
   ProductCardWrapper, ProductCardLink,
-  ProductCardInfo, ProductCardName
+  ProductCardInfo, ProductCardName, ProductCardBtn
 } from './ProducCard.styled';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const ProductCard = ({ item }) => {
   const [showOverlay, setShowOverlay] = useState(false);
+  const dispatch = useDispatch();
   const { id, name, price, weight, amount, imgUrl } = item;
 
   return (
@@ -35,7 +38,7 @@ export const ProductCard = ({ item }) => {
           <ProductCardName>{name}</ProductCardName>
           <p>{price}грн/{ weight ? `${weight}кг` : `${amount}шт`} </p>
         </div>
-        <BasketIcon />
+        <ProductCardBtn type='button' onClick={() => dispatch(addItem(item))}><BasketIcon /></ProductCardBtn>
       </ProductCardInfo>
     </div>
   );
