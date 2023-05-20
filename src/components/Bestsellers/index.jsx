@@ -1,7 +1,7 @@
 import { products } from "data/products";
 import { useEffect, useState } from "react";
 import { SectionTitle } from "styles/common/SectionTitle.styled";
-import { BestsellerItem } from "./BestsellerItem";
+import { ProductCard } from "components/ProductCard";
 import { NavDots } from "./NavDots";
 import { ReactComponent as Arrow } from '../../assets/icons/arrow-long.svg';
 import {
@@ -29,12 +29,12 @@ export const Bestsellers = () => {
   }, [items]);
 
   return (
-    <BestsellersSection>
-      <SectionTitle>Бестселлери</SectionTitle>
+    <BestsellersSection >
+      <SectionTitle id="bestsellers">Бестселлери</SectionTitle>
 
-      <BestsellersWrapper>
+      <BestsellersWrapper >
         {items ? croppedItems().map((item) => {
-          return <BestsellerItem key={item.id} item={item} />
+          return <ProductCard key={item.id} item={item} />
         }) : null }
       </BestsellersWrapper>
 
@@ -44,7 +44,7 @@ export const Bestsellers = () => {
         <BestsellersNavBtn type='button' onClick={() => setCurrentSlide(prevState => prevState + 1)} disabled={currentSlide === Math.ceil(items.length / amountOfSlides) - 1} reversed><Arrow /></BestsellersNavBtn>
       </BestsellersActions>
 
-      <BestsellersLink to='/catalog'>Переглянути весь асортимент</BestsellersLink>
+      <BestsellersLink to='/catalog/all'>Переглянути весь асортимент</BestsellersLink>
     </BestsellersSection>
   );
 };

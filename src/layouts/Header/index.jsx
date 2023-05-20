@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { ReactComponent as BurgerIcon } from '../../assets/icons/burger.svg';
 import { ReactComponent as BasketIcon } from '../../assets/icons/basket.svg';
@@ -5,9 +6,9 @@ import {
   HeaderContainer, HeaderNav, HeaderLogo, HeaderActions,
   HeaderMenuBtn, HeaderBasketBtn
 } from "./Header.styled";
-import { useSelector } from "react-redux";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-export const Header = () => {
+export const Header = ({ onShowModal, onShowMenu }) => {
   const { items } = useSelector(state => state.orders);
 
   const filledBasket = () => {
@@ -17,8 +18,8 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <HeaderNav>
-        <Link to="/">Бестселлери</Link>
-        <Link to='/catalog'>Каталог</Link>
+        <AnchorLink href='#bestsellers'>Бестселлери</AnchorLink>
+        <Link to='/catalog/all'>Каталог</Link>
       </HeaderNav>
 
       <HeaderLogo to='/'>
@@ -33,10 +34,10 @@ export const Header = () => {
       </HeaderLogo>
 
       <HeaderActions>
-        <HeaderMenuBtn type='button'><BurgerIcon /></HeaderMenuBtn>
-        <Link to="/">Доставка</Link>
-        <Link to="/">Про мене</Link>
-        <HeaderBasketBtn type='button' accent={filledBasket()}><BasketIcon /></HeaderBasketBtn>
+        <HeaderMenuBtn type='button' onClick={onShowMenu}><BurgerIcon /></HeaderMenuBtn>
+        <AnchorLink href='#delivery'>Доставка</AnchorLink>
+        <AnchorLink href='#about'>Про мене</AnchorLink>
+        <HeaderBasketBtn type='button' accent={filledBasket()} onClick={onShowModal}><BasketIcon /></HeaderBasketBtn>
       </HeaderActions>
     </HeaderContainer>
   );

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItem } from 'redux/ordersSlice';
+import { toast } from 'react-toastify';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Overlay } from 'styles/common/Overlay.styled';
 import { ReactComponent as BasketIcon } from '../../assets/icons/basket.svg';
-
 import {
   ProductCardWrapper, ProductCardLink,
   ProductCardInfo, ProductCardName, ProductCardBtn
@@ -14,7 +14,15 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 export const ProductCard = ({ item }) => {
   const [showOverlay, setShowOverlay] = useState(false);
   const dispatch = useDispatch();
-  const { id, name, price, weight, amount, imgUrl } = item;
+  const { id, name, options, price, amountInBox, imgUrl } = item;
+
+  const addHandler = (item) => {
+    const newItem = { ...item, totalAmount: 1 };
+    dispatch(addItem(newItem));
+    toast.success('Додано в кошик');
+  };
+
+  //console.log(item);
 
   return (
     <div>
@@ -27,7 +35,7 @@ export const ProductCard = ({ item }) => {
         />
         {showOverlay
           ? <Overlay onClick={() => setShowOverlay(false)}>
-            <ProductCardLink to={`/catalog/${id}`}>Детальніше</ProductCardLink>
+            <ProductCardLink to={`/product/${id}`}>Детальніше</ProductCardLink>
           </Overlay>
           : null
         }
@@ -36,9 +44,9 @@ export const ProductCard = ({ item }) => {
       <ProductCardInfo>
         <div>
           <ProductCardName>{name}</ProductCardName>
-          <p>{price}грн/{ weight ? `${weight}кг` : `${amount}шт`} </p>
+          <p>{options ? `${options.weight.value * price} грн/шт` : `${price} грн/${amountInBox}шт`}</p>
         </div>
-        <ProductCardBtn type='button' onClick={() => dispatch(addItem(item))}><BasketIcon /></ProductCardBtn>
+        <ProductCardBtn type='button' onClick={() => addHandler(item)}><BasketIcon /></ProductCardBtn>
       </ProductCardInfo>
     </div>
   );

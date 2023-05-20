@@ -9,7 +9,12 @@ export const ordersSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, { payload }) => {
-      state.items.push(payload);
+      const result = state.items.findIndex(item => item.id === payload.id);
+      if (result === -1) {
+        state.items.push(payload);
+      } else {
+        state.items[result].totalAmount += 1;
+      }
     }
   }
 });

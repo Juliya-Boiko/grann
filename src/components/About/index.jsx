@@ -6,7 +6,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 export const About = () => {
   return (
     <AboutSection>
-      <SectionTitle>Про мене</SectionTitle>
+      <SectionTitle id="about">Про мене</SectionTitle>
       <AboutWrapper>
         <AboutImage>
           <LazyLoadImage src={require(`../../assets/images/about/about.png`)}

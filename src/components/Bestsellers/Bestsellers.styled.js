@@ -9,10 +9,15 @@ export const BestsellersSection = styled.section`
 `;
 
 export const BestsellersWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  margin: 0 0 40px 0;
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
-    display: flex;
-    align-items: center;
-    margin: 0 -15px 80px -15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
   }
 `;
 
@@ -56,6 +61,7 @@ export const BestsellersLink = styled(Link)`
   justify-content: center;
   width: 100%;
   height: 67px;
+  margin: 0 auto;
   padding: 0 30px;
   text-transform: uppercase;
   text-align: center;

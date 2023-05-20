@@ -47,5 +47,6 @@ export const GlobalStyle = createGlobalStyle`
   
   img {
     display: block;
+    margin: 0;
   }
 `;

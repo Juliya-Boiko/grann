@@ -1,3 +1,4 @@
+import { Field, Form } from 'formik';
 import styled from "styled-components";
 import bgi1xPngMobile from '../../assets/images/feedback/mobile/bgi.png';
 import bgi1xWebpMobile from '../../assets/images/feedback/mobile/bgi.webp';
@@ -66,13 +67,13 @@ export const FeedbackTitle = styled.h2`
   }
 `;
 
-export const FeedbackForm = styled.form`
+export const FeedbackForm = styled(Form)`
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     width: 500px;
   }
 `;
 
-export const FeedbackInput = styled.input`
+export const FeedbackInput = styled(Field)`
   width: 100%;
   margin: 0 0 20px 0;
   padding: 20px;
@@ -81,6 +82,10 @@ export const FeedbackInput = styled.input`
   border-radius: 10px;
   overflow: hidden;
   background-color: ${p => p.theme.colors.secondary};
+  //outline: ${p => p.outlined ? 'none' :  '1px solid red'};
+  /* &:focus {
+    outline: ${p => p.valid ? 'none' : '1px solid red'};
+  } */
 `;
 
 export const FeddbackTextarea = styled.textarea`
@@ -106,4 +111,8 @@ export const FeedbackSubmitBtn = styled.button`
   overflow: hidden;
   color: ${p => p.theme.colors.primary};
   background-color: ${p => p.theme.colors.accent};
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.4;
+  }
 `;

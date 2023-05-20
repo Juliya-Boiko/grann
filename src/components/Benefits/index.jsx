@@ -50,7 +50,7 @@ export const Benefits = () => {
         </BenefitsContent>
       </section>
       
-      <section>
+      <section id="delivery">
         <SectionTitle>Доставка і оплата</SectionTitle>
         <DeliveryList>
           <DeliveryItem>

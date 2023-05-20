@@ -7,7 +7,6 @@ const Product = () => {
   const { id } = useParams();
   const product = products.find(product => product.id === id);
   
-
   return (
     <>
       <Scrumbs />

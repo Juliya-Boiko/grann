@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItem } from 'redux/ordersSlice';
 import { options } from 'data/options';
+import { toast } from 'react-toastify';
 import { Select } from 'components/Select';
-import { ProductCalc } from 'components/ProductCalc';
 import { ProductTabs } from 'components/ProductTabs';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {
@@ -12,18 +14,29 @@ import {
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const ProductInfo = ({ item }) => {
-  const [customOptions, setCustomOptions] = useState({ type: null, decor: {title: '', value: 0 }, weight: {title: '', value: 0} });
-  const [total, setTotal] = useState(0);
-  const { id, type, name, tags, priceKg, price, amount, imgUrl, info } = item;
+  const [customOptions, setCustomOptions] = useState({ type: '', decor: {title: '', value: 0 }, weight: {title: '', value: 1} });
+  const dispatch = useDispatch();
+  const { type, name, tags, price, imgUrl, info } = item;
 
   const totalPrice = () => {
     if (type === 'pies') {
       if (customOptions.weight.value) {
-        return customOptions.weight.value * priceKg + customOptions.decor.value;
+        return customOptions.weight.value * price + customOptions.decor.value;
       }
       return 0;
-    }
-    return total;
+    } else {
+      return price;
+    } 
+  };
+
+  const orderHandler = () => {
+    const newOrder = {
+      ...item,
+      options: { ...customOptions },
+      totalAmount: 1
+    };
+    dispatch(addItem(newOrder));
+    toast.success('Додано в кошик');
   };
 
   return (
@@ -51,12 +64,12 @@ export const ProductInfo = ({ item }) => {
               <Select data={options.decor} select={customOptions.decor.title} onSelect={(data) => setCustomOptions(prevState => { return {...prevState, decor: { title: data.title, value: data.value }} })} />
               <Select data={options.weights} select={customOptions.weight.title} onSelect={(data) => setCustomOptions(prevState => { return {...prevState, weight: { title: data.title, value: data.value }} })}/>
             </ProductInfoSelects>
-            : <ProductCalc price={price} amount={amount} onClick={(amount) => setTotal(amount)} />
+            : null
           }
           
           <ProductInfoOrder>
             <ProductInfoPrice>{totalPrice()} грн</ProductInfoPrice>
-            <ProductInfoBtn>Замовити</ProductInfoBtn>
+            <ProductInfoBtn type='button' onClick={orderHandler}>Замовити</ProductInfoBtn>
           </ProductInfoOrder>
           
         </ProductInfoWrapper>

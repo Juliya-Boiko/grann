@@ -49,6 +49,7 @@ export const ProductInfoTags = styled.div`
 `;
 
 export const ProductInfoSelects = styled.div`
+  margin: 0 0 40px 0;
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
      display: flex;
      flex-wrap: wrap;
@@ -89,4 +90,5 @@ export const ProductInfoBtn = styled.button`
   overflow: hidden;
   color: ${p => p.theme.colors.secondary};
   background-color: ${p => p.theme.colors.primary};
+  cursor: pointer;
 `;

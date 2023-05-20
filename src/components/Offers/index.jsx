@@ -14,9 +14,7 @@ export const Offers = () => {
               width="100%" height="auto"
               alt={title} effect="blur"
             />
-            <OffersLink>
-              {title}
-            </OffersLink>
+            <OffersLink to={`/catalog/${id}`}>{title}</OffersLink>
           </OffersItem>
         })}
       </OffersList>

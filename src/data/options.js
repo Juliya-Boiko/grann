@@ -6,23 +6,23 @@ export const options = {
     options: [
       {
         id: nanoid(),
-        title: 'Ванільний наполеон'
+        title: 'Ванільний'
       },
       {
         id: nanoid(),
-        title: 'Карамельний наполеон'
+        title: 'Карамельний'
       },
       {
         id: nanoid(),
-        title: 'Безлактозний наполеон'
+        title: 'Безлактозний'
       },
       {
         id: nanoid(),
-        title: 'Наполеон без цукру'
+        title: 'Без цукру'
       },
       {
         id: nanoid(),
-        title: 'Наполеон без глютену та цукру'
+        title: 'Без глютену та цукру'
       },
     ]
   },
@@ -78,11 +78,6 @@ export const options = {
         id: nanoid(),
         title: 'Карамель',
         value: 300,
-      },
-      {
-        id: nanoid(),
-        title: 'Наполеон без цукру',
-        value: 350,
       },
     ]
   }

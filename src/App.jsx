@@ -6,6 +6,7 @@ const Layout = lazy(() => import('./layouts'));
 const Home = lazy(() => import('./pages/Home'));
 const Catalog = lazy(() => import('./pages/Catalog'));
 const Product = lazy(() => import('./pages/Product'));
+const Order = lazy(() => import('./pages/Order'));
 
 export const App = () => {
   return (
@@ -13,8 +14,9 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index path="/" element={<Home />} />
-          <Route path="catalog" element={<Catalog />} />
-          <Route path="catalog/:id" element={<Product />} />
+          <Route path="catalog/:type" element={<Catalog />} />
+          <Route path="product/:id" element={<Product />} />
+          <Route path="order" element={<Order />} />
         </Route>
       </Routes>
     </Suspense>

@@ -19,7 +19,7 @@ export const Hero = () => {
         <HeroSocItem><InstaIcon /></HeroSocItem>
       </HeroSocList>
 
-      <HeroLink to='/catalog'>До каталогу</HeroLink>
+      <HeroLink to='/catalog/all'>До каталогу</HeroLink>
     </HeroSection>
   );
 };

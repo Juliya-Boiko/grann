@@ -14,6 +14,8 @@ export const FaqLabel= styled.div`
   border-bottom: 1px solid ${p => p.theme.colors.primary};
   cursor: pointer;
   svg {
+    width: 20px;
+    height: 20px;
     transform: ${p => p.current ? 'rotate(180deg)' : 'rotate(0deg)'};
   }
 `;

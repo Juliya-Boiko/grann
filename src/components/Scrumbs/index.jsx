@@ -8,9 +8,9 @@ export const Scrumbs = () => {
   const scrumbs = pathname.split('/');
 
   const setRoute = (name) => {
-    if (name === 'catalog') {
-      return 'Каталог'
-    }
+    // if (name === 'catalog') {
+    return 'Каталог';
+    // }
   };
 
   const getProductName = id => products.find(product => product.id === id).name;
@@ -18,7 +18,7 @@ export const Scrumbs = () => {
   return (
     <ScrumbsSection>
       <Link to='/'>Головна</Link>{' / '}
-      <Link to='/catalog'>{setRoute(scrumbs[1])}</Link> 
+      <Link to='/catalog/all'>{setRoute(scrumbs[1])}</Link> 
       {params.id ? ` / ${getProductName(params.id)}` : null}
     </ScrumbsSection>
   );
