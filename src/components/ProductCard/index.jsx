@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItem } from 'redux/ordersSlice';
 import { toast } from 'react-toastify';
@@ -12,7 +11,6 @@ import {
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const ProductCard = ({ item }) => {
-  const [showOverlay, setShowOverlay] = useState(false);
   const dispatch = useDispatch();
   const { id, name, options, price, amountInBox, imgUrl } = item;
 
@@ -22,8 +20,6 @@ export const ProductCard = ({ item }) => {
     toast.success('Додано в кошик');
   };
 
-  //console.log(item);
-
   return (
     <div>
       <ProductCardWrapper>
@@ -31,14 +27,10 @@ export const ProductCard = ({ item }) => {
           srcSet={`${require(`../../assets/images/products/${imgUrl}@2x.png`)} 2x`}
           width="100%" height="auto"
           alt={name} effect="blur"
-          onClick={() => setShowOverlay(true)}
         />
-        {showOverlay
-          ? <Overlay onClick={() => setShowOverlay(false)}>
-            <ProductCardLink to={`/product/${id}`}>Детальніше</ProductCardLink>
-          </Overlay>
-          : null
-        }
+        <Overlay>
+          <ProductCardLink to={`/product/${id}`}>Детальніше</ProductCardLink>
+        </Overlay>
       </ProductCardWrapper>
 
       <ProductCardInfo>

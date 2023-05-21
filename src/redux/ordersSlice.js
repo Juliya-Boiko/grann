@@ -15,8 +15,12 @@ export const ordersSlice = createSlice({
       } else {
         state.items[result].totalAmount += 1;
       }
+    },
+    deleteItem: (state, { payload }) => {
+      const filtered = state.items.filter(item => item.id !== payload)
+      state.items = [...filtered];
     }
   }
 });
 
-export const { addItem } = ordersSlice.actions;
+export const { addItem, deleteItem } = ordersSlice.actions;

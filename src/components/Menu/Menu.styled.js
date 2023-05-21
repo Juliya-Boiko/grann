@@ -9,7 +9,7 @@ export const MenuContainer = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  padding: 100px 10px 10px 10px;
+  padding: 100px 10px 10px 40px;
   font-size: 18px;
   text-transform: uppercase;
   color: ${p => p.theme.colors.secondary};
@@ -22,7 +22,7 @@ export const MenuContainer = styled.div`
 export const MenuCloseBtn = styled.button`
   position: absolute;
   top: 30px;
-  right: 10px;
+  right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,5 +37,15 @@ export const MenuCloseBtn = styled.button`
     width: 100%;
     height: auto;
     fill: inherit;
+  }
+`;
+
+export const MenuNav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  a {
+    &:not(:last-child) {
+      margin: 0 0 30px 0;
+    }
   }
 `;

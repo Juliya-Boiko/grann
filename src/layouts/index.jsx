@@ -27,8 +27,8 @@ const Layout = () => {
       {showModal ? <Modal onClose={() => setShowModal(false)} /> : null}
       {showMenu ? <Menu onClose={() => setShowMenu(false)} /> : null}
       <ToastContainer
-        position="top-center" theme="colored" autoClose={3000} hideProgressBar={false}
-        newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable
+        position="top-center" theme="colored" autoClose={2000} hideProgressBar={true}
+        newestOnTop={false} closeOnClick rtl={false} draggable
       />
     </Container>
   );

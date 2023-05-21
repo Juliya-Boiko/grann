@@ -3,7 +3,14 @@ import styled from "styled-components";
 
 export const ProductCardWrapper = styled.div`
   position: relative;
+  display: flex;
   margin: 0 0 10px 0;
+  height: auto;
+  &:hover {
+    div {
+      display: flex;
+    }
+  }
 `;
 
 export const ProductCardLink = styled(Link)`

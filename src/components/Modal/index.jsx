@@ -14,18 +14,9 @@ export const Modal = ({ onClose }) => {
 
   const totalOrder = items.reduce((acc, { price, options }) => {
     return acc + (price * options.weight.value + options.decor.value);
-  }, 0)
-  // const total = items.reduce((acc, { customOptions, baseOptions, price, totalAmount }) => {
-  //   if (customOptions) {
-  //     return acc + customOptions.price * totalAmount;
-  //   }
-  //   if (baseOptions) {
-  //     return acc + baseOptions.weight * price * totalAmount
-  //   }
-  //   return acc + price * totalAmount;
-  // }, 0);
+  }, 0);
 
-  console.log(totalOrder);
+  //console.log(totalOrder);
 
   return (
     <ModalContainer>

@@ -7,7 +7,7 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   z-index: 5;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(0deg, rgba(112, 90, 102, 0.2), rgba(112, 90, 102, 0.2));
