@@ -1,7 +1,19 @@
 import styled from "styled-components";
 
-export const OrderListSection = styled.section`
+export const OrderContent = styled.div`
   padding: 0 10px 40px 10px;
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 60px 100px 120px 100px;
+  }
+`;
+
+export const OrderListSection = styled.section`
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
+    width: 500px;
+  }
 `;
 
 export const OrderListWrapper = styled.div`
@@ -9,6 +21,9 @@ export const OrderListWrapper = styled.div`
   border-radius: 10px;
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
+     padding: 40px 50px 60px 50px;
+  }
 `;
 
 export const OrderListSubtitle = styled.p`
@@ -18,17 +33,22 @@ export const OrderListSubtitle = styled.p`
 
 export const OrderListItem = styled.li`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   &:not(:last-child) {
     margin:  0 0 20px 0;
+  }
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobile}) {
+    flex-wrap: nowrap;
   }
 `;
 
 export const OrderListActions = styled.div`
   display: flex;
   align-items: center;
-  min-width: 110px;
+  justify-content: flex-end;
+  min-width: 120px;
   margin: 0 0 0 30px;
 `;
 

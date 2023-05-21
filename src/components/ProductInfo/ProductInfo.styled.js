@@ -78,7 +78,7 @@ export const ProductInfoPrice = styled.p`
 `;
 
 export const ProductInfoBtn = styled.button`
-  width: 287px;
+  width: 100%;
   height: 67px;
   display: flex;
   align-items: center;
@@ -91,4 +91,7 @@ export const ProductInfoBtn = styled.button`
   color: ${p => p.theme.colors.secondary};
   background-color: ${p => p.theme.colors.primary};
   cursor: pointer;
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobile}) {
+    width: 287px;
+  }
 `;

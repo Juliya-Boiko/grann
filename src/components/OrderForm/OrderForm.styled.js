@@ -1,9 +1,12 @@
 import { Form } from 'formik';
 import styled from 'styled-components';
 
-
 export const OrderFormContainer = styled(Form)`
-  padding: 0 10px 100px 10px;
+  padding: 40px 0 0 0;
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
+    width: 500px;
+    padding: 0;
+  }
 `;
 
 export const OrderFormSubtitle = styled.h3`
@@ -27,8 +30,6 @@ export const OrderFormAddress = styled.div`
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 20px;
   margin: 0 0 30px 0;
-  /* opacity: ${p => p.disabled ? '0.4' : '1'}; */
-
   input {
     margin: 0;
   }

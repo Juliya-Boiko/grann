@@ -1,8 +1,6 @@
 import { PageTitle } from "styles/common/PageTitle.styled";
-import {
-  ProcessSection, ProcessImages, ProcessWrapper,
-  ProcessLink, ProcessText, ProcessActions
-} from "./ProcessSection.styled";
+import { GroupLinks } from "components/GroupLinks";
+import { ProcessSection, ProcessImages, ProcessWrapper, ProcessText } from "./ProcessSection.styled";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -26,11 +24,7 @@ export const Process = () => {
       </ProcessImages>
       <PageTitle>Дякую за замовлення!</PageTitle>
       <ProcessText>Ваше замовлення прийняте в обробку та незабаром вам зателефонує менеджер для уточнення деталей</ProcessText>
-      <ProcessActions>
-        <ProcessLink to='/'>На головну</ProcessLink>
-        <ProcessLink to='/catalog/all' primary>продовжити покупки</ProcessLink>
-      </ProcessActions>
-      
+      <GroupLinks />
     </ProcessSection>
   );
 };

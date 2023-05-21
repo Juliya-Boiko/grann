@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const NavDotsWrapper = styled.div`
-  display: flex;
-  align-items: center;
+  display: none;
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobile}) {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const NavDotsItem = styled.span`

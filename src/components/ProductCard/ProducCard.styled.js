@@ -18,13 +18,17 @@ export const ProductCardLink = styled(Link)`
   align-items: center;
   justify-content: center;
   width: calc(100% - 20px);
-  height: 67px;
+  height: 40px;
   text-transform: uppercase;
   text-align: center;
-  font-size: 18px;
+  font-size: 10px;
   border-radius: 10px;
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobile}) {
+    height: 67px;
+    font-size: 18px;
+  }
 `;
 
 export const ProductCardInfo = styled.div`
@@ -39,7 +43,10 @@ export const ProductCardInfo = styled.div`
 
 export const ProductCardName = styled.p`
   margin: 0 0 10px 0;
-  font-size: 14px;
+
+  @media screen and (min-width: ${p => p.theme.breakpoints.mobile}) {
+    font-size: 14px;
+  }
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop})  {
     font-size: 24px;
   }

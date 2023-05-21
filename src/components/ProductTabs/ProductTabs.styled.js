@@ -8,10 +8,10 @@ export const ProductTabsContainer = styled.div`
 
 export const ProductTabsWrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: stretch;
 `;
 
-export const ProductTabsItem = styled.span`
+export const ProductTabsItem = styled.div`
   flex-grow: 1;
   text-align: center;
   padding: 0 0 16px 0;
