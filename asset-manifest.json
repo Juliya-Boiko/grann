@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/grann/static/css/main.cd2e038f.css",
-    "main.js": "/grann/static/js/main.42f1da94.js",
+    "main.js": "/grann/static/js/main.838ba81c.js",
     "static/js/956.9473f495.chunk.js": "/grann/static/js/956.9473f495.chunk.js",
     "static/css/845.3e55091d.chunk.css": "/grann/static/css/845.3e55091d.chunk.css",
-    "static/js/845.fd47e979.chunk.js": "/grann/static/js/845.fd47e979.chunk.js",
+    "static/js/845.523b5099.chunk.js": "/grann/static/js/845.523b5099.chunk.js",
     "static/css/638.fc0ecd30.chunk.css": "/grann/static/css/638.fc0ecd30.chunk.css",
     "static/js/638.03ea9c59.chunk.js": "/grann/static/js/638.03ea9c59.chunk.js",
     "static/css/104.3e55091d.chunk.css": "/grann/static/css/104.3e55091d.chunk.css",
-    "static/js/104.e1fff6f6.chunk.js": "/grann/static/js/104.e1fff6f6.chunk.js",
+    "static/js/104.3f6b8f64.chunk.js": "/grann/static/js/104.3f6b8f64.chunk.js",
     "static/js/235.e86af03f.chunk.js": "/grann/static/js/235.e86af03f.chunk.js",
     "static/css/707.3e55091d.chunk.css": "/grann/static/css/707.3e55091d.chunk.css",
     "static/js/707.17e6c86c.chunk.js": "/grann/static/js/707.17e6c86c.chunk.js",
@@ -74,14 +74,14 @@
     "static/media/arrow-long.svg": "/grann/static/media/arrow-long.40beb9a4203a69c26796cffd16e8a87c.svg",
     "static/media/burger.svg": "/grann/static/media/burger.8fcd4dffc39d0d9f740ea6c8b5ce297d.svg",
     "main.cd2e038f.css.map": "/grann/static/css/main.cd2e038f.css.map",
-    "main.42f1da94.js.map": "/grann/static/js/main.42f1da94.js.map",
+    "main.838ba81c.js.map": "/grann/static/js/main.838ba81c.js.map",
     "956.9473f495.chunk.js.map": "/grann/static/js/956.9473f495.chunk.js.map",
     "845.3e55091d.chunk.css.map": "/grann/static/css/845.3e55091d.chunk.css.map",
-    "845.fd47e979.chunk.js.map": "/grann/static/js/845.fd47e979.chunk.js.map",
+    "845.523b5099.chunk.js.map": "/grann/static/js/845.523b5099.chunk.js.map",
     "638.fc0ecd30.chunk.css.map": "/grann/static/css/638.fc0ecd30.chunk.css.map",
     "638.03ea9c59.chunk.js.map": "/grann/static/js/638.03ea9c59.chunk.js.map",
     "104.3e55091d.chunk.css.map": "/grann/static/css/104.3e55091d.chunk.css.map",
-    "104.e1fff6f6.chunk.js.map": "/grann/static/js/104.e1fff6f6.chunk.js.map",
+    "104.3f6b8f64.chunk.js.map": "/grann/static/js/104.3f6b8f64.chunk.js.map",
     "235.e86af03f.chunk.js.map": "/grann/static/js/235.e86af03f.chunk.js.map",
     "707.3e55091d.chunk.css.map": "/grann/static/css/707.3e55091d.chunk.css.map",
     "707.17e6c86c.chunk.js.map": "/grann/static/js/707.17e6c86c.chunk.js.map",
@@ -95,6 +95,6 @@
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.42f1da94.js"
+    "static/js/main.838ba81c.js"
   ]
 }
