@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { ProductTabsContainer, ProductTabsWrapper, ProductTabsItem, ProductTabsDescr } from "./ProductTabs.styled";
 
-
 export const ProductTabs = ({ data }) => {
   const [currentTab, setCurrentTab] = useState(0);
 
   const tabsLabels = data.map(item => item.title);
-
+  console.log(currentTab);
+  
   return (
     <ProductTabsContainer>
       <ProductTabsWrapper>

@@ -2,8 +2,7 @@ import { Formik } from 'formik';
 import { toast } from 'react-toastify';
 import { feedbackSets } from 'schemas/feedbackSets';
 import { FeedbackComponent } from './FeedbackComponent';
-import {
-  FeedbackSection, FeedbackWrapper, FeedbackTitle,
+import { FeedbackSection, FeedbackWrapper, FeedbackTitle,
   FeedbackForm, FeddbackTextarea, FeedbackSubmitBtn
 } from "./Feedback.styled";
 
@@ -26,27 +25,16 @@ export const Feedback = () => {
         {({ values, handleChange, errors, touched }) => (
           <FeedbackForm>
             <FeedbackComponent
-              handleChange={handleChange}
-              value={values.name}
-              name="name"
-              placeholder="Ім’я"
-              errors={errors.name}
-              touched={touched.name}
-            />
+              handleChange={handleChange} value={values.name}
+              name="name" placeholder="Ім’я"
+              errors={errors.name} touched={touched.name} />
             <FeedbackComponent
-              handleChange={handleChange}
-              value={values.tel}
-              name="tel"
-              placeholder="Номер телефону"
-              errors={errors.tel}
-              touched={touched.tel}
-            />
+              handleChange={handleChange} value={values.tel}
+              name="tel" placeholder="Номер телефону"
+              errors={errors.tel} touched={touched.tel} />
             <FeddbackTextarea
-              value={values.comment}
-              name="comment"
-              placeholder="Опишіть ваші побажання:"
-              onChange={handleChange}
-            />
+              onChange={handleChange} value={values.comment}
+              name="comment" placeholder="Опишіть ваші побажання:" />
             <FeedbackSubmitBtn type='submit' disabled={values.name === '' || values.tel === ''}>Надіслати</FeedbackSubmitBtn>
           </FeedbackForm>
         )}

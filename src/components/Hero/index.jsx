@@ -10,15 +10,12 @@ export const Hero = () => {
         <HeroTitle>grann</HeroTitle>
         <p>авторські десерти</p>
       </HeroTitleWrapper>
-      
-      <HeroContentImg></HeroContentImg>
-
+      <HeroContentImg />
       <HeroSocList>
         <HeroSocItem><TelegIcon /></HeroSocItem>
         <HeroSocItem><FaceIcon /></HeroSocItem>
         <HeroSocItem><InstaIcon /></HeroSocItem>
       </HeroSocList>
-
       <HeroLink to='/catalog/all'>До каталогу</HeroLink>
     </HeroSection>
   );

@@ -6,11 +6,9 @@ import { toast } from 'react-toastify';
 import { Select } from 'components/Select';
 import { ProductTabs } from 'components/ProductTabs';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import {
-  ProductInfoSection, ProductInfoContainer, ProductInfoImage,
-  ProductInfoWrapper, ProductInfoName, ProductInfoTags, ProductInfoSelects,
-  ProductInfoOrder, ProductInfoPrice, ProductInfoBtn
-} from './ProductInfo.styled';
+import { ProductInfoSection, ProductInfoContainer, ProductInfoImage, ProductInfoWrapper, 
+  ProductInfoName, ProductInfoTags, ProductInfoSelects, ProductInfoOrder, 
+  ProductInfoPrice, ProductInfoBtn } from './ProductInfo.styled';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const ProductInfo = ({ item }) => {

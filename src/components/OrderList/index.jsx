@@ -1,9 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteItem } from "redux/ordersSlice";
-import {
-  OrderListSection, OrderListWrapper, OrderListSubtitle,
-  OrderListItem, OrderListActions, OrderListBtn
-} from "./OrderList.styled";
+import { OrderListSection, OrderListWrapper, OrderListSubtitle,
+  OrderListItem, OrderListActions, OrderListBtn } from "./OrderList.styled";
 import { ReactComponent as DeleteIcon } from '../../assets/icons/close.svg';
 
 export const OrderList = () => {

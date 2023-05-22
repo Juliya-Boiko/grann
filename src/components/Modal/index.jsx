@@ -1,14 +1,11 @@
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import {
-  ModalContainer, ModalWrapper, ModalOrders, ModalItem, ModalInfo,
-  ModalText, ModalCloseBtn, ModalContent,
-  ModalSummary, ModalTotal, ModalOrderBtn
-} from "./Modal.styled";
+import { ModalContainer, ModalWrapper, ModalOrders, ModalItem, ModalInfo, ModalText, 
+  ModalCloseBtn, ModalContent, ModalSummary, ModalTotal, ModalOrderBtn } from "./Modal.styled";
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { useNavigate } from 'react-router';
 
 export const Modal = ({ onClose }) => {
   const { items } = useSelector(state => state.orders);

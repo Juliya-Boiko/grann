@@ -4,13 +4,10 @@ export const FeedbackComponent = ({ type = 'text', handleChange, value, name, pl
   return (
     <FeedbackComponentWrapper>
       <FeedbackComponentInput
-        type={type}
-        onChange={handleChange}
-        value={value}
-        name={name}
+        type={type} onChange={handleChange}
+        value={value} name={name}
         placeholder={placeholder}
-        accentOutline={errors && touched ? true : false}
-      />
+        accentOutline={errors && touched ? true : false} />
       {errors && touched ? <FeedbackComponentError>{errors}</FeedbackComponentError> : null}
     </FeedbackComponentWrapper>
   );

@@ -4,10 +4,7 @@ import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
 import { BrandImage } from "components/BrandImage";
 import { MenuContainer, MenuCloseBtn, MenuNav } from './Menu.styled';
 
-const imageSize = {
-  mobile: '182px',
-  desktop: '0px'
-};
+const imageSize = { mobile: '182px', desktop: '0px' };
 
 export const Menu = ({ onClose }) => {
   return (

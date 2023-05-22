@@ -4,10 +4,8 @@ import { toast } from 'react-toastify';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Overlay } from 'styles/common/Overlay.styled';
 import { ReactComponent as BasketIcon } from '../../assets/icons/basket.svg';
-import {
-  ProductCardWrapper, ProductCardLink,
-  ProductCardInfo, ProductCardName, ProductCardBtn
-} from './ProducCard.styled';
+import { ProductCardWrapper, ProductCardLink, ProductCardInfo, ProductCardName,
+   ProductCardBtn } from './ProducCard.styled';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const ProductCard = ({ item }) => {

@@ -4,10 +4,7 @@ import { SectionTitle } from "styles/common/SectionTitle.styled";
 import { ProductCard } from "components/ProductCard";
 import { NavDots } from "./NavDots";
 import { ReactComponent as Arrow } from '../../assets/icons/arrow-long.svg';
-import {
-  BestsellersSection, BestsellersWrapper, BestsellersActions,
-  BestsellersNavBtn, BestsellersLink
-} from "./Bestsellers.styled";
+import { BestsellersSection, BestsellersWrapper, BestsellersActions, BestsellersNavBtn, BestsellersLink } from "./Bestsellers.styled";
 
 export const Bestsellers = () => {
   const [amountOfSlides, setAmountOfSlides] = useState(2);
