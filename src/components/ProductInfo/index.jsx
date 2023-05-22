@@ -5,10 +5,10 @@ import { options } from 'data/options';
 import { toast } from 'react-toastify';
 import { Select } from 'components/Select';
 import { ProductTabs } from 'components/ProductTabs';
+import { OrderBtn } from 'components/buttons/OrderBtn';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { ProductInfoSection, ProductInfoContainer, ProductInfoImage, ProductInfoWrapper, 
-  ProductInfoName, ProductInfoTags, ProductInfoSelects, ProductInfoOrder, 
-  ProductInfoPrice, ProductInfoBtn } from './ProductInfo.styled';
+  ProductInfoName, ProductInfoTags, ProductInfoSelects, ProductInfoOrder, ProductInfoPrice } from './ProductInfo.styled';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const ProductInfo = ({ item }) => {
@@ -67,14 +67,7 @@ export const ProductInfo = ({ item }) => {
           
           <ProductInfoOrder>
             <ProductInfoPrice>{totalPrice()} грн</ProductInfoPrice>
-            <ProductInfoBtn
-              whileHover={{ scale: 1.04 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              type='button'
-              onClick={orderHandler}
-            >
-              Замовити
-            </ProductInfoBtn>
+            <OrderBtn onClick={orderHandler} />
           </ProductInfoOrder>
           
         </ProductInfoWrapper>

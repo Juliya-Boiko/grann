@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { options } from 'data/options';
+import { motion } from "framer-motion";
 import { ReactComponent as Arrow } from '../../assets/icons/arrow-short.svg';
 import { SelectContainer, SelectLabel, SelectOptions, SelectText } from './Select.styled';
-import { motion } from "framer-motion";
 
 export const Select = ({ data, select, onSelect }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -10,7 +10,7 @@ export const Select = ({ data, select, onSelect }) => {
 
   const selectHandler = (data) => {
     label === options.types.label ? onSelect(data.title) : onSelect(data)
-  }
+  };
 
   return (
     <SelectContainer>

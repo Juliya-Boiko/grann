@@ -5,13 +5,18 @@ export const ProductTabs = ({ data }) => {
   const [currentTab, setCurrentTab] = useState(0);
 
   const tabsLabels = data.map(item => item.title);
-  console.log(currentTab);
   
   return (
     <ProductTabsContainer>
       <ProductTabsWrapper>
         {tabsLabels.map((item, idx) => {
-          return <ProductTabsItem accent={currentTab === idx} key={idx} onClick={() => setCurrentTab(idx)}>{item}</ProductTabsItem>
+          return <ProductTabsItem
+            accent={currentTab === idx}
+            key={idx}
+            onClick={() => setCurrentTab(idx)}
+          >
+            {item}
+          </ProductTabsItem>
         })}
       </ProductTabsWrapper>
       <ProductTabsDescr>

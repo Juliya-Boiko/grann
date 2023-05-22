@@ -48,7 +48,6 @@ export const ProductCardInfo = styled.div`
 
 export const ProductCardName = styled.p`
   margin: 0 0 10px 0;
-
   @media screen and (min-width: ${p => p.theme.breakpoints.mobile}) {
     font-size: 14px;
   }

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { motion } from 'framer-motion';
 
 export const ProductInfoSection = styled.section`
   padding: 40px 10px 60px 10px;
@@ -75,24 +74,5 @@ export const ProductInfoPrice = styled.p`
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     font-size: 42px;
     margin: 0;
-  }
-`;
-
-export const ProductInfoBtn = styled(motion.button)`
-  width: 100%;
-  height: 67px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  font-size: 24px;
-  border: none;
-  border-radius: ${p => p.theme.borderRadius};
-  overflow: hidden;
-  color: ${p => p.theme.colors.secondary};
-  background-color: ${p => p.theme.colors.primary};
-  cursor: pointer;
-  @media screen and (min-width: ${p => p.theme.breakpoints.mobile}) {
-    width: 287px;
   }
 `;
