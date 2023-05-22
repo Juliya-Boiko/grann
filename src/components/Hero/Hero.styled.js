@@ -31,7 +31,7 @@ export const HeroTitleWrapper = styled.div`
   }
 `;
 
-export const HeroTitle = styled.h1`
+export const HeroTitle = styled(motion.h1)`
   text-transform: uppercase;
   font-family: 'Moniqa';
   font-size: 120px;
@@ -41,7 +41,7 @@ export const HeroTitle = styled.h1`
   }
 `;
 
-export const HeroContentImg = styled.div`
+export const HeroContentImg = styled(motion.div)`
   position: absolute;
   left: 0;
   bottom: 0;
@@ -80,13 +80,13 @@ export const HeroContentImg = styled.div`
   }
 `;
 
-export const HeroSocList = styled.ul`
+export const HeroSocList = styled(motion.ul)`
   position: absolute;
   top: 292px;
   right: 10px;
   z-index: 10;
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
-    top: 553px;
+    top: 500px;
     right: 100px;
   }
 `;
@@ -131,7 +131,6 @@ export const HeroLink = styled((Link))`
   }
   &:hover {
     transform: scale(1.04);
-    box-shadow: 0px 10px 40px 17px rgba(221,213,198,0.61);
     @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
       transform: translateX(-50%) scale(1.04);
     }

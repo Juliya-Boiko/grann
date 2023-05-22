@@ -56,7 +56,7 @@ export const FeedbackWrapper = styled.div`
   }
 `;
 
-export const FeedbackTitle = styled.h2`
+export const FeedbackTitle = styled(motion.h2)`
   margin: 0 0 20px 0;
   text-align: center;
   font-family: 'Jeff';
@@ -74,7 +74,7 @@ export const FeedbackForm = styled(Form)`
   }
 `;
 
-export const FeddbackTextarea = styled.textarea`
+export const FeedbackTextarea = styled.textarea`
   width: 100%;
   height: 180px;
   margin: 0 0 30px 0;
@@ -85,20 +85,4 @@ export const FeddbackTextarea = styled.textarea`
   overflow: hidden;
   background-color: ${p => p.theme.colors.secondary};
   resize: none;
-`;
-
-export const FeedbackSubmitBtn = styled(motion.button)`
-  width: 100%;
-  height: 67px;
-  text-transform: uppercase;
-  font-size: 18px;
-  border: none;
-  border-radius: ${p => p.theme.borderRadius};
-  overflow: hidden;
-  color: ${p => p.theme.colors.primary};
-  background-color: ${p => p.theme.colors.accent};
-  cursor: pointer;
-  &:disabled {
-    opacity: 0.4;
-  }
 `;

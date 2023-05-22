@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
 export const AboutSection = styled.section`
   display: flex;
@@ -27,7 +28,7 @@ export const AboutImage = styled.div`
   }
 `;
 
-export const AboutContent = styled.div`
+export const AboutContent = styled(motion.div)`
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     max-width: 500px;
   }

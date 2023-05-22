@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
-export const SectionTitle = styled.h2`
+export const SectionTitle = styled(motion.h2)`
   max-width: 355px;
   margin: 0 auto 60px auto;
   text-align: center;

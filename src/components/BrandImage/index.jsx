@@ -4,7 +4,12 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const BrandImage = ({ width, light }) => {
   return (
-    <BrandImageContainer width={width}>
+    <BrandImageContainer
+      initial="hidden" whileInView="visible"
+      transition={{ delay: 0.4, duration: 1 }}
+      variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 }}}
+      width={width}
+    >
       <BrandImageWrapper>
         {light
           ? <LazyLoadImage src={require(`../../assets/images/brand/title-light.png`)}

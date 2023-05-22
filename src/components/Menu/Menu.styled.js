@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
+import { motion } from "framer-motion";
 
 export const MenuContainer = styled.div`
   position: absolute;
@@ -25,9 +28,20 @@ export const MenuNav = styled.nav`
   display: flex;
   flex-direction: column;
   margin: 0 0 150px 0;
-  a {
+  /* a {
     &:not(:last-child) {
       margin: 0 0 30px 0;
     }
+  } */
+`;
+
+export const MenuHash = styled(motion(HashLink))`
+  cursor: pointer;
+  &:not(:last-child) {
+    margin: 0 0 30px 0;
   }
+`;
+
+export const MenuLink = styled(motion(Link))`
+  margin: 0 0 30px 0;
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const BenefitsSection = styled.section`
   padding: 0 10px 100px 10px;
@@ -27,7 +28,7 @@ export const BenefitsList = styled.ul`
   }
 `;
 
-export const BenefitsItem = styled.li`
+export const BenefitsItem = styled(motion.li)`
   &:not(:last-child) {
     margin: 0 0 40px 0;
   }

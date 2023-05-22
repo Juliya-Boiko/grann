@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const BrandImageContainer = styled.div`
+export const BrandImageContainer = styled(motion.div)`
   position: relative;
   width: ${p => p.width.mobile};
   height: auto;

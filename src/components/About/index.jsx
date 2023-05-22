@@ -6,7 +6,14 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 export const About = () => {
   return (
     <AboutSection>
-      <SectionTitle id="about">Про мене</SectionTitle>
+      <SectionTitle
+        id="about"
+        initial="hidden" whileInView="visible"
+        transition={{ delay: 0.2, duration: 1 }}
+        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 }}}
+      >
+        Про мене
+      </SectionTitle>
       <AboutWrapper>
         <AboutImage>
           <LazyLoadImage src={require(`../../assets/images/about/about.png`)}
@@ -15,7 +22,11 @@ export const About = () => {
             alt='From Grann with love' effect="blur"
           />
         </AboutImage>
-        <AboutContent>
+        <AboutContent
+          initial="hidden" whileInView="visible"
+          transition={{ delay: 0.4, duration: 1 }}
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 }}}
+        >
           <AboutName>Анна Кострома</AboutName>
           <AboutPosition>Засновниця кондитерської Grann Pastry</AboutPosition>
           <AboutText>Від хобі до власної справи.</AboutText>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const OffersSection = styled.section`
   padding: 120px 10px 50px 10px;
@@ -20,7 +21,7 @@ export const OffersList = styled.ul`
   }
 `;
 
-export const OffersItem = styled.li`
+export const OffersItem = styled(motion.li)`
   position: relative;
   @media screen and (max-width: 1439px) {
     &:not(:last-child) {

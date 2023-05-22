@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const DeliverySection = styled.section`
   padding: 0 10px 100px 10px;
@@ -16,7 +17,7 @@ export const DeliveryList = styled.ul`
   }
 `;
 
-export const DeliveryItem = styled.li`
+export const DeliveryItem = styled(motion.li)`
   position: relative;
   max-width: 290px;
   &:not(:last-child) {

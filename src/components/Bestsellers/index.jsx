@@ -27,11 +27,18 @@ export const Bestsellers = () => {
 
   return (
     <BestsellersSection >
-      <SectionTitle id="bestsellers">Бестселлери</SectionTitle>
+      <SectionTitle
+        id="bestsellers"
+        initial="hidden" whileInView="visible"
+        transition={{ delay: 0.2, duration: 1 }}
+        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 }}}
+      >
+        Бестселлери
+      </SectionTitle>
 
       <BestsellersWrapper >
-        {items ? croppedItems().map((item) => {
-          return <ProductCard key={item.id} item={item} />
+        {items ? croppedItems().map((item, idx) => {
+          return <ProductCard key={item.id} item={item} delay={idx} />
         }) : null }
       </BestsellersWrapper>
 

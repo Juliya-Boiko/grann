@@ -2,16 +2,21 @@ import { Formik } from 'formik';
 import { toast } from 'react-toastify';
 import { feedbackSets } from 'schemas/feedbackSets';
 import { FeedbackComponent } from './FeedbackComponent';
-import { FeedbackSection, FeedbackWrapper, FeedbackTitle,
-  FeedbackForm, FeddbackTextarea, FeedbackSubmitBtn
-} from "./Feedback.styled";
+import { FeedbackBtn } from 'components/buttons/FeedbackBtn';
+import { FeedbackSection, FeedbackWrapper, FeedbackTitle, FeedbackForm, FeedbackTextarea } from "./Feedback.styled";
 
 export const Feedback = () => {
 
   return (
     <FeedbackSection>
       <FeedbackWrapper>
-        <FeedbackTitle>Давайте зробимо щось унікальне разом!</FeedbackTitle>
+        <FeedbackTitle
+          initial="hidden" whileInView="visible"
+          transition={{ delay: 0.4, duration: 1 }}
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 }}}
+        >
+          Давайте зробимо щось унікальне разом!
+        </FeedbackTitle>
         <p>Ви можете замовити свій власний рецепт десерту, який вам буде до вподоби. Заповніть заявку та я зв’яжусь з вами, аби обговорити деталі замовлення.</p>
       </FeedbackWrapper>
       <Formik
@@ -32,17 +37,10 @@ export const Feedback = () => {
               handleChange={handleChange} value={values.tel}
               name="tel" placeholder="Номер телефону"
               errors={errors.tel} touched={touched.tel} />
-            <FeddbackTextarea
+            <FeedbackTextarea
               onChange={handleChange} value={values.comment}
               name="comment" placeholder="Опишіть ваші побажання:" />
-            <FeedbackSubmitBtn
-              type='submit'
-              disabled={values.name === '' || values.tel === ''}
-              whileHover={{ scale: 1.04 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              Надіслати
-            </FeedbackSubmitBtn>
+            <FeedbackBtn disabled={values.name === '' || values.tel === ''}  />
           </FeedbackForm>
         )}
       </Formik>

@@ -10,7 +10,13 @@ export const Faq = () => {
 
   return (
     <FaqSection>
-      <SectionTitle>Популярні запитання</SectionTitle>
+      <SectionTitle
+        initial="hidden" whileInView="visible"
+        transition={{ delay: 0.2, duration: 1 }}
+        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 }}}
+      >
+        Популярні запитання
+      </SectionTitle>
       <ul>
         {faq.map(({ id, question, answer }) => {
           return <li key={id}>
@@ -18,7 +24,6 @@ export const Faq = () => {
               animate={current === id ? "open" : "closed"}
               whileTap={{ scale: 0.97 }}
               onClick={() => setCurrent(id)}
-              current={id === current}
             >
               <FaqQuestion>{question}</FaqQuestion>
               <motion.div
