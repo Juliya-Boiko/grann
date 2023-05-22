@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 
 export const FooterContainer = styled.footer`
   display: flex;
@@ -18,7 +18,7 @@ export const FooterContainer = styled.footer`
   }
 `;
 
-export const FooterLogo = styled(Link)`
+export const FooterLogo = styled(motion(Link))`
   width: 255px;
   height: 201px;
   margin: 0 0 40px 0;
@@ -51,7 +51,7 @@ export const FooterSocList = styled.ul`
   margin: 0 0 40px 0;
 `;
 
-export const FooterSocItem = styled.li`
+export const FooterSocItem = styled(motion.li)`
   display: flex;
   align-items: center;
   justify-content: center;

@@ -67,7 +67,14 @@ export const OrderForm = () => {
         
         <OrderFormTotal>Всього до сплати: <OrderFormPrice>{totalOrder} грн</OrderFormPrice></OrderFormTotal>
           
-        <OrderFormBtn type='submit'>Оформити замовлення</OrderFormBtn>
+          <OrderFormBtn
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            type='submit'
+          >
+            Оформити замовлення
+          </OrderFormBtn>
       </OrderFormContainer>
       )}
     </Formik>

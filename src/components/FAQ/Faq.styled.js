@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const FaqSection = styled.section`
   padding: 100px 10px;
@@ -7,16 +8,16 @@ export const FaqSection = styled.section`
   }
 `;
 
-export const FaqLabel= styled.div`
+export const FaqLabel= styled(motion.div)`
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 40px 0;
   border-bottom: 1px solid ${p => p.theme.colors.primary};
   cursor: pointer;
   svg {
     width: 20px;
     height: 20px;
-    transform: ${p => p.current ? 'rotate(180deg)' : 'rotate(0deg)'};
   }
 `;
 

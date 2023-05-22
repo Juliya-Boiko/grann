@@ -9,10 +9,20 @@ export const Filters = ({ filter, onClick }) => {
     <FiltersSection>
       <Swiper
         slidesPerView={"auto"}
-          spaceBetween={30}
+        spaceBetween={30}
       >
         {offers.map(({ id, title }) => {
-        return <SwiperSlide key={id} style={{ width: 'auto' }}><FiltersBtn accent={filter === id} type='button'  onClick={() => onClick(id)}>{title}</FiltersBtn></SwiperSlide> 
+          return <SwiperSlide key={id} style={{ width: 'auto' }}>
+            <FiltersBtn
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              accent={filter === id ? "true" : "false"}
+              type='button'
+              onClick={() => onClick(id)}
+            >
+              {title}
+            </FiltersBtn>
+          </SwiperSlide> 
         })}
       </Swiper>
     </FiltersSection>

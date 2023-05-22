@@ -1,24 +1,17 @@
 import { useSelector } from "react-redux";
 import { Link} from "react-router-dom";
-import { ReactComponent as BurgerIcon } from '../../assets/icons/burger.svg';
-import { ReactComponent as BasketIcon } from '../../assets/icons/basket.svg';
-import {
-  HeaderContainer, HeaderNav, HeaderLogo, HeaderActions,
-  HeaderMenuBtn, HeaderBasketBtn
-} from "./Header.styled";
+import { BasketBtn } from "components/buttons/BasketBtn";
+import { MenuBtn } from "components/buttons/MenuBtn";
+import { HeaderContainer, HeaderNav, HeaderLogo, HeaderActions } from "./Header.styled";
 import { HashLink } from 'react-router-hash-link';
 
 export const Header = ({ onShowModal, onShowMenu }) => {
   const { items } = useSelector(state => state.orders);
 
-  const filledBasket = () => {
-    return items.length >= 1 ? true : false;
-  };
-
   return (
     <HeaderContainer>
       <HeaderNav>
-        <HashLink to="/#bestsellers" smooth >Бестселлери</HashLink>
+        <HashLink to="/#bestsellers" smooth>Бестселлери</HashLink>
         <Link to='/catalog/all'>Каталог</Link>
       </HeaderNav>
 
@@ -34,10 +27,10 @@ export const Header = ({ onShowModal, onShowMenu }) => {
       </HeaderLogo>
 
       <HeaderActions>
-        <HeaderMenuBtn type='button' onClick={onShowMenu}><BurgerIcon /></HeaderMenuBtn>
+        <MenuBtn onClick={onShowMenu} />
         <HashLink to="/#delivery" smooth >Доставка</HashLink>
         <HashLink to="/#about" smooth >Про мене</HashLink>
-        <HeaderBasketBtn type='button' accent={filledBasket()} onClick={onShowModal}><BasketIcon /></HeaderBasketBtn>
+        <BasketBtn length={items.length} onClick={onShowModal}/>
       </HeaderActions>
     </HeaderContainer>
   );

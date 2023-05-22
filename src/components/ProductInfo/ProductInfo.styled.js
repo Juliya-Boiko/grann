@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
 export const ProductInfoSection = styled.section`
   padding: 40px 10px 60px 10px;
@@ -77,7 +78,7 @@ export const ProductInfoPrice = styled.p`
   }
 `;
 
-export const ProductInfoBtn = styled.button`
+export const ProductInfoBtn = styled(motion.button)`
   width: 100%;
   height: 67px;
   display: flex;

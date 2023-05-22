@@ -20,27 +20,6 @@ export const MenuContainer = styled.div`
   }
 `;
 
-export const MenuCloseBtn = styled.button`
-  position: absolute;
-  top: 30px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 33px;
-  height: 33px;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  fill: ${p => p.theme.colors.secondary};
-  cursor: pointer;
-  svg {
-    width: 100%;
-    height: auto;
-    fill: inherit;
-  }
-`;
-
 export const MenuNav = styled.nav`
   width: 100%;
   display: flex;

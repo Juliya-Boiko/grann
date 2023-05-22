@@ -1,5 +1,6 @@
 import { Form } from 'formik';
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 
 export const OrderFormContainer = styled(Form)`
   padding: 40px 0 0 0;
@@ -64,7 +65,7 @@ export const OrderFormPrice = styled.span`
   font-weight: 700;
 `;
 
-export const OrderFormBtn = styled.button`
+export const OrderFormBtn = styled(motion.button)`
   width: 100%;
   height: 67px;
   display: flex;

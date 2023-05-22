@@ -48,4 +48,8 @@ export const OffersLink = styled(Link)`
   border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
+  transition: ${p => p.theme.transition};
+  &:hover {
+    box-shadow: 0px 10px 40px 17px rgba(221,213,198,0.61);
+  }
 `;

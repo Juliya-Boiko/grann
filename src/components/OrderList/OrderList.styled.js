@@ -51,22 +51,3 @@ export const OrderListActions = styled.div`
   min-width: 120px;
   margin: 0 0 0 30px;
 `;
-
-export const OrderListBtn = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 13px;
-  height: 13px;
-  margin: 0 0 0 30px;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  fill: ${p => p.theme.colors.primary};
-  cursor: pointer;
-  svg {
-    width: 100%;
-    height: auto;
-    fill: inherit;
-  }
-`;

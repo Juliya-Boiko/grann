@@ -1,5 +1,6 @@
 import { Form } from 'formik';
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 import bgi1xPngMobile from '../../assets/images/feedback/mobile/bgi.png';
 import bgi1xWebpMobile from '../../assets/images/feedback/mobile/bgi.webp';
 import bgi2xPngMobile from '../../assets/images/feedback/mobile/bgi@2x.png';
@@ -80,13 +81,13 @@ export const FeddbackTextarea = styled.textarea`
   padding: 20px;
   outline: none;
   border: none;
-  border-radius: ${p => p.theme.borderRadius}x;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.secondary};
   resize: none;
 `;
 
-export const FeedbackSubmitBtn = styled.button`
+export const FeedbackSubmitBtn = styled(motion.button)`
   width: 100%;
   height: 67px;
   text-transform: uppercase;

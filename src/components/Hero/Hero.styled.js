@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import bgi1xPngMobile from '../../assets/images/hero/mobile/bgi.png';
 import bgi1xWebpMobile from '../../assets/images/hero/mobile/bgi.webp';
 import bgi2xPngMobile from '../../assets/images/hero/mobile/bgi@2x.png';
@@ -90,7 +91,7 @@ export const HeroSocList = styled.ul`
   }
 `;
 
-export const HeroSocItem = styled.li`
+export const HeroSocItem = styled(motion.li)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +108,7 @@ export const HeroSocItem = styled.li`
   }
 `;
 
-export const HeroLink = styled(Link)`
+export const HeroLink = styled((Link))`
   position: absolute;
   left: 10px;
   bottom: -20px;
@@ -121,10 +122,18 @@ export const HeroLink = styled(Link)`
   border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
+  transition: ${p => p.theme.transition};
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     width: 394px;
     bottom: 140px;
     left: 50%;
     transform: translateX(-50%);
+  }
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0px 10px 40px 17px rgba(221,213,198,0.61);
+    @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
+      transform: translateX(-50%) scale(1.04);
+    }
   }
 `;

@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
-import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
+import { CloseBtn } from 'components/buttons/CloseBtn';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { ModalContainer, ModalWrapper, ModalOrders, ModalItem, ModalInfo, ModalText, 
-  ModalCloseBtn, ModalContent, ModalSummary, ModalTotal, ModalOrderBtn } from "./Modal.styled";
+import { ModalContainer, ModalOrders, ModalItem, ModalInfo, ModalText, 
+  ModalWrapper, ModalContent, ModalSummary, ModalTotal, ModalOrderBtn } from "./Modal.styled";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const Modal = ({ onClose }) => {
@@ -26,9 +26,9 @@ export const Modal = ({ onClose }) => {
 
   return (
     <ModalContainer>
+      <CloseBtn onClick={onClose} fill='primary'/>
       <ModalWrapper>
         <ModalText>Ваше замовлення:</ModalText>
-        <ModalCloseBtn type='button' onClick={onClose}><CloseIcon /></ModalCloseBtn>
       </ModalWrapper>
 
       <ModalContent>
@@ -56,7 +56,16 @@ export const Modal = ({ onClose }) => {
             <span>Загальна сума:</span>
             <span>{totalOrder} грн</span>
           </ModalTotal>
-          <ModalOrderBtn type='button' onClick={orderHandler}>Оформити</ModalOrderBtn>
+          <ModalOrderBtn
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            type='button'
+            onClick=
+            {orderHandler}
+          >
+            Оформити
+          </ModalOrderBtn>
         </ModalSummary>
       </ModalContent>
       

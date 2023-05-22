@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const SelectContainer = styled.div`
   position: relative;
@@ -14,7 +15,7 @@ export const SelectContainer = styled.div`
   }
 `;
 
-export const SelectLabel = styled.div`
+export const SelectLabel = styled(motion.div)`
 height: 82px;
   display: flex;
   align-items: center;

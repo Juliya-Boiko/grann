@@ -1,15 +1,15 @@
 import { Link} from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
-import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
+import { CloseBtn } from "components/buttons/CloseBtn";
 import { BrandImage } from "components/BrandImage";
-import { MenuContainer, MenuCloseBtn, MenuNav } from './Menu.styled';
+import { MenuContainer, MenuNav } from './Menu.styled';
 
 const imageSize = { mobile: '182px', desktop: '0px' };
 
 export const Menu = ({ onClose }) => {
   return (
     <MenuContainer>
-      <MenuCloseBtn type='button' onClick={onClose}><CloseIcon /></MenuCloseBtn>
+      <CloseBtn onClick={onClose} fill='secondary'/>
       <MenuNav>
         <HashLink to="/#bestsellers" smooth onClick={onClose}>Бестселлери</HashLink>
         <Link to='/catalog/all' onClick={onClose}>Каталог</Link>

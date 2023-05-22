@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const ModalContainer = styled.div`
   position: absolute;
@@ -15,9 +16,6 @@ export const ModalContainer = styled.div`
 `;
 
 export const ModalWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin: 0 0 40px 0;
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     margin: 0 0 80px 0;
@@ -61,24 +59,6 @@ export const ModalText = styled.p`
   }
 `;
 
-export const ModalCloseBtn = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 33px;
-  height: 33px;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  fill: ${p => p.theme.colors.primary};
-  cursor: pointer;
-  svg {
-    width: 100%;
-    height: auto;
-    fill: inherit;
-  }
-`;
-
 export const ModalSummary = styled.div`
   padding: 30px 20px;
   border-radius: ${p => p.theme.borderRadius};
@@ -97,7 +77,7 @@ export const ModalTotal = styled.div`
   margin: 0 0 40px 0;
 `;
 
-export const ModalOrderBtn = styled.button`
+export const ModalOrderBtn = styled(motion.button)`
   display: inline-block;
   width: 100%;
   padding: 22px 0;

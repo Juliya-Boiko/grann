@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -23,13 +24,25 @@ export const HeaderNav = styled.div`
     display: flex;
   }
   a {
+    position: relative;
     &:not(:last-child) {
       margin: 0 86px 0 0;
+    }
+    &:hover, &:focus {
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 1px;
+        background-color: ${p => p.theme.colors.primary};
+      }
     }
   }
 `;
 
-export const HeaderLogo = styled(Link)`
+export const HeaderLogo = styled(motion(Link))`
   position: absolute;
   top: 20px;
   left: 50%;
@@ -41,9 +54,15 @@ export const HeaderLogo = styled(Link)`
     width: 115px;
     height: 91px;
   }
+  &:hover, &:focus {
+    img {
+      transform: scale(1.04);
+    }
+  }
   img {
     width: 100%;
     height: 100%;
+    transition: ${p => p.theme.transition};
   }
 `;
 
@@ -53,66 +72,20 @@ export const HeaderActions = styled.div`
   a {
     display: none;
     @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
+      position: relative;
       display: inline-block;
       margin: 0 102px 0 0;
+      &:hover, &:focus {
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          width: 100%;
+          height: 1px;
+          background-color: ${p => p.theme.colors.primary};
+        }
+      }
     }
-  }
-`;
-
-export const HeaderMenuBtn = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 37px;
-  margin: 0 20px 0 0;
-  padding: 10px;
-  background-color: transparent;
-  border: none;
-  fill: ${p => p.theme.colors.primary};
-  cursor: pointer;
-  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
-    display: none;
-  }
-  svg {
-    width: 100%;
-    height: auto;
-    fill: inherit;
-  }
-`;
-
-export const HeaderBasketBtn = styled.button`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25px;
-  height: 25px;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  fill: ${p => p.theme.colors.primary};
-  cursor: pointer;
-  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
-    width: 30px;
-    height: 30px;
-  }
-  svg {
-    width: 100%;
-    height: 100%;
-    fill: inherit;
-  }
-  &::after {
-    content: '';
-    display: ${p => p.accent ? 'block' : 'none'};
-    width: 10px;
-    height: 10px;
-    background-color: lightgreen;
-    position: absolute;
-    z-index: 2;
-    top: -4px;
-    right: -5px;
-    border-radius: ${p => p.theme.borderRadius};
-    overflow: hidden;
   }
 `;

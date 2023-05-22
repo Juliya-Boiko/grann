@@ -67,7 +67,14 @@ export const ProductInfo = ({ item }) => {
           
           <ProductInfoOrder>
             <ProductInfoPrice>{totalPrice()} грн</ProductInfoPrice>
-            <ProductInfoBtn type='button' onClick={orderHandler}>Замовити</ProductInfoBtn>
+            <ProductInfoBtn
+              whileHover={{ scale: 1.04 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              type='button'
+              onClick={orderHandler}
+            >
+              Замовити
+            </ProductInfoBtn>
           </ProductInfoOrder>
           
         </ProductInfoWrapper>

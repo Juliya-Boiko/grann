@@ -35,7 +35,14 @@ export const Feedback = () => {
             <FeddbackTextarea
               onChange={handleChange} value={values.comment}
               name="comment" placeholder="Опишіть ваші побажання:" />
-            <FeedbackSubmitBtn type='submit' disabled={values.name === '' || values.tel === ''}>Надіслати</FeedbackSubmitBtn>
+            <FeedbackSubmitBtn
+              type='submit'
+              disabled={values.name === '' || values.tel === ''}
+              whileHover={{ scale: 1.04 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              Надіслати
+            </FeedbackSubmitBtn>
           </FeedbackForm>
         )}
       </Formik>

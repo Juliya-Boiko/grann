@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { faq } from "../../data/faqs";
+import { motion } from "framer-motion";
 import { SectionTitle } from "styles/common/SectionTitle.styled";
 import { FaqSection, FaqLabel, FaqQuestion, FaqAnswer } from "./Faq.styled";
 import { ReactComponent as Arrow } from '../../assets/icons/arrow-short.svg';
@@ -13,9 +14,23 @@ export const Faq = () => {
       <ul>
         {faq.map(({ id, question, answer }) => {
           return <li key={id}>
-            <FaqLabel onClick={() => setCurrent(id)} current={id === current} >
+            <FaqLabel
+              animate={current === id ? "open" : "closed"}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => setCurrent(id)}
+              current={id === current}
+            >
               <FaqQuestion>{question}</FaqQuestion>
-              <Arrow />
+              <motion.div
+                variants={{
+                  open: { rotate: 180 },
+                  closed: { rotate: 0 }
+                }}
+                transition={{ duration: 0.2 }}
+                style={{ originY: 0.55 }}
+              >
+                <Arrow />
+              </motion.div>
             </FaqLabel>
             {id === current ? <FaqAnswer>{answer}</FaqAnswer> : null}
           </li>

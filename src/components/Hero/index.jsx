@@ -12,9 +12,9 @@ export const Hero = () => {
       </HeroTitleWrapper>
       <HeroContentImg />
       <HeroSocList>
-        <HeroSocItem><TelegIcon /></HeroSocItem>
-        <HeroSocItem><FaceIcon /></HeroSocItem>
-        <HeroSocItem><InstaIcon /></HeroSocItem>
+        <HeroSocItem whileHover={{ scale: 1.04 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><TelegIcon /></HeroSocItem>
+        <HeroSocItem whileHover={{ scale: 1.04 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><FaceIcon /></HeroSocItem>
+        <HeroSocItem whileHover={{ scale: 1.04 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><InstaIcon /></HeroSocItem>
       </HeroSocList>
       <HeroLink to='/catalog/all'>До каталогу</HeroLink>
     </HeroSection>

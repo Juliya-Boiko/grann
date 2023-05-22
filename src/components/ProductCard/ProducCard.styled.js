@@ -29,6 +29,11 @@ export const ProductCardLink = styled(Link)`
     height: 67px;
     font-size: 18px;
   }
+  transition: ${p => p.theme.transition};
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0px 10px 40px 17px rgba(221,213,198,0.61);
+  }
 `;
 
 export const ProductCardInfo = styled.div`
@@ -49,25 +54,5 @@ export const ProductCardName = styled.p`
   }
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop})  {
     font-size: 24px;
-  }
-`;
-
-export const ProductCardBtn = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  fill: ${p => p.theme.colors.primary};
-  cursor: pointer;
-  svg {
-    min-width: 25px;
-    height: 25px;
-    fill: inherit;
-    @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
-      width: 30px;
-      height: 30px;
-    }
   }
 `;

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const GroupLinksContainer = styled.div`
   width: 100%;
@@ -10,7 +11,7 @@ export const GroupLinksContainer = styled.div`
   }
 `;
 
-export const GroupLinksItem = styled(Link)`
+export const GroupLinksItem = styled(motion(Link))`
   display: flex;
   align-items: center;
   justify-content: center;

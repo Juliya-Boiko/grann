@@ -9,7 +9,11 @@ import {
 export const Footer = () => {
   return (
     <FooterContainer>
-      <FooterLogo to='/'>
+      <FooterLogo
+        to='/'
+        whileHover={{ scale: 1.04 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      >
         <picture>
           <source
             srcSet={`${require('../../assets/images/logo/footer/logo.webp')} 1x, ${require('../../assets/images/logo/footer/logo@2x.webp')} 2x,`}
@@ -28,9 +32,9 @@ export const Footer = () => {
       
       <div>
         <FooterSocList>
-          <FooterSocItem><InstaIcon /></FooterSocItem>
-          <FooterSocItem><TelegIcon /></FooterSocItem>
-          <FooterSocItem><WhatsIcon /></FooterSocItem>
+          <FooterSocItem whileHover={{ scale: 1.04 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><InstaIcon /></FooterSocItem>
+          <FooterSocItem whileHover={{ scale: 1.04 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><TelegIcon /></FooterSocItem>
+          <FooterSocItem whileHover={{ scale: 1.04 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}><WhatsIcon /></FooterSocItem>
         </FooterSocList>
         <FooterInfo>Політика конфіденційності</FooterInfo>
         <FooterInfo>Договір оферти</FooterInfo>

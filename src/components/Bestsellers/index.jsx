@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { SectionTitle } from "styles/common/SectionTitle.styled";
 import { ProductCard } from "components/ProductCard";
 import { NavDots } from "./NavDots";
-import { ReactComponent as Arrow } from '../../assets/icons/arrow-long.svg';
-import { BestsellersSection, BestsellersWrapper, BestsellersActions, BestsellersNavBtn, BestsellersLink } from "./Bestsellers.styled";
+import { SliderBtn } from "components/buttons/SliderBtn";
+import { BestsellersSection, BestsellersWrapper, BestsellersActions, BestsellersLink } from "./Bestsellers.styled";
 
 export const Bestsellers = () => {
   const [amountOfSlides, setAmountOfSlides] = useState(2);
@@ -36,12 +36,18 @@ export const Bestsellers = () => {
       </BestsellersWrapper>
 
       <BestsellersActions>
-        <BestsellersNavBtn type='button' onClick={() => setCurrentSlide(prevState => prevState - 1)} disabled={currentSlide === 0}><Arrow /></BestsellersNavBtn>
+        <SliderBtn onClick={() => setCurrentSlide(prevState => prevState - 1)} disabled={currentSlide === 0} />
         <NavDots items={items} current={currentSlide} amountOfSlides={amountOfSlides} onClick={(id) => setCurrentSlide(id)} />
-        <BestsellersNavBtn type='button' onClick={() => setCurrentSlide(prevState => prevState + 1)} disabled={currentSlide === Math.ceil(items.length / amountOfSlides) - 1} reversed><Arrow /></BestsellersNavBtn>
+        <SliderBtn onClick={() => setCurrentSlide(prevState => prevState + 1)} disabled={currentSlide === Math.ceil(items.length / amountOfSlides) - 1} reversed/>
       </BestsellersActions>
 
-      <BestsellersLink to='/catalog/all'>Переглянути весь асортимент</BestsellersLink>
+      <BestsellersLink
+        to='/catalog/all'
+        whileHover={{ scale: 1.04 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      >
+        Переглянути весь асортимент
+      </BestsellersLink>
     </BestsellersSection>
   );
 };
