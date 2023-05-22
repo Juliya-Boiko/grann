@@ -6,24 +6,13 @@ export const theme = {
   },
 
   colors: {
-    // brand: {
-      primary: '#705A66',
-      secondary: '#F5F7F8',
-      accent: '#F5EEE0',
-      white: '#ffffff',
-      // black: '#333333',
-      // green: '#2EBF4F',
-    // },
-    // grayScale: {
-    //   gray3: '#F5F5F5',
-    //   gray2: '#808080',
-    //   gray1: '#F4F4F4'
-    // },
-    // complementary: {
-    //   green: '#28A745',
-    //   blue: ' #0284D0',
-    //   red: '#EB5757'
-    // }
+    primary: '#705A66',
+    secondary: '#F5F7F8',
+    accent: '#F5EEE0',
+    white: '#ffffff',
+    complementary: {
+      accent: '#DDD5C6',
+    }
   },
   
   fontWeight: {
@@ -31,5 +20,6 @@ export const theme = {
     medium: 600,
   },
 
+  borderRadius: '10px',
   transition: 'all 250ms ease-in-out',
 };

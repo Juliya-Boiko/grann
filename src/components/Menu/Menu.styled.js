@@ -9,6 +9,9 @@ export const MenuContainer = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 100px 10px 10px 40px;
   font-size: 18px;
   text-transform: uppercase;
@@ -41,8 +44,10 @@ export const MenuCloseBtn = styled.button`
 `;
 
 export const MenuNav = styled.nav`
+  width: 100%;
   display: flex;
   flex-direction: column;
+  margin: 0 0 150px 0;
   a {
     &:not(:last-child) {
       margin: 0 0 30px 0;

@@ -81,7 +81,7 @@ export const ModalCloseBtn = styled.button`
 
 export const ModalSummary = styled.div`
   padding: 30px 20px;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
   font-weight: 700;
@@ -105,7 +105,7 @@ export const ModalOrderBtn = styled.button`
   text-transform: uppercase;
   font-size: 18px;
   border: none;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   color: ${p => p.theme.colors.accent};
   background-color: ${p => p.theme.colors.primary};

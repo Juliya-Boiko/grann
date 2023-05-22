@@ -17,7 +17,7 @@ export const GroupLinksItem = styled(Link)`
   width: 100%;
   height: 67px;
   text-transform: uppercase;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   color: ${p => p.primary ? p.theme.colors.accent : p.theme.colors.primary};
   background-color: ${p => p.primary ? p.theme.colors.primary : p.theme.colors.accent};

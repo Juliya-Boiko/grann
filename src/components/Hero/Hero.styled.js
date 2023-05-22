@@ -119,7 +119,7 @@ export const HeroLink = styled(Link)`
   width: calc(100% - 20px);
   height: 67px;
   text-transform: uppercase;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {

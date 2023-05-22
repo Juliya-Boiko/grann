@@ -20,7 +20,7 @@ height: 82px;
   align-items: center;
   justify-content: space-between;
   padding: 20px 30px;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
   cursor: pointer;

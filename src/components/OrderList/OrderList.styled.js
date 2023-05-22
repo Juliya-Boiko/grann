@@ -18,7 +18,7 @@ export const OrderListSection = styled.section`
 
 export const OrderListWrapper = styled.div`
   padding: 40px 20px 60px 20px;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {

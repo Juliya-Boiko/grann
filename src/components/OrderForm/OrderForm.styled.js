@@ -44,7 +44,7 @@ export const OrderFormComment = styled.textarea`
   padding: 10px 30px;
   outline: none;
   border: none;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
   resize: none;
@@ -73,7 +73,7 @@ export const OrderFormBtn = styled.button`
   text-transform: uppercase;
   font-size: 18px;
   border: none;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   color: inherit;
   background-color: ${p => p.theme.colors.accent};

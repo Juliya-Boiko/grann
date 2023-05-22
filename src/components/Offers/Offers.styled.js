@@ -45,7 +45,7 @@ export const OffersLink = styled(Link)`
   height: 67px;
   text-transform: uppercase;
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
 `;

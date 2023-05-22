@@ -66,7 +66,7 @@ export const BestsellersLink = styled(Link)`
   text-transform: uppercase;
   text-align: center;
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {

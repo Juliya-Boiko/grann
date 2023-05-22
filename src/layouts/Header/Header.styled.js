@@ -112,7 +112,7 @@ export const HeaderBasketBtn = styled.button`
     z-index: 2;
     top: -4px;
     right: -5px;
-    border-radius: 10px;
+    border-radius: ${p => p.theme.borderRadius};
     overflow: hidden;
   }
 `;

@@ -86,7 +86,7 @@ export const ProductInfoBtn = styled.button`
   text-transform: uppercase;
   font-size: 24px;
   border: none;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   color: ${p => p.theme.colors.secondary};
   background-color: ${p => p.theme.colors.primary};

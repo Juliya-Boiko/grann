@@ -80,7 +80,7 @@ export const FeddbackTextarea = styled.textarea`
   padding: 20px;
   outline: none;
   border: none;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius}x;
   overflow: hidden;
   background-color: ${p => p.theme.colors.secondary};
   resize: none;
@@ -92,7 +92,7 @@ export const FeedbackSubmitBtn = styled.button`
   text-transform: uppercase;
   font-size: 18px;
   border: none;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   color: ${p => p.theme.colors.primary};
   background-color: ${p => p.theme.colors.accent};

@@ -10,7 +10,7 @@ export const OrderComponentInput = styled.input`
   padding: 20px;
   outline: none;
   border: none;
-  border-radius: 10px;
+  border-radius: ${p => p.theme.borderRadius};
   overflow: hidden;
   background-color: ${p => p.theme.colors.accent};
   &:disabled {
